@@ -1,6 +1,6 @@
 class A {
-  int value;
-  A(this.value);
+  final int value;
+  const A(this.value);
 
   @override
   bool operator ==(Object other) {
