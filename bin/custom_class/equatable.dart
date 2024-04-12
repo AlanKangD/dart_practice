@@ -1,7 +1,13 @@
-class A {
+import 'package:equatable/equatable.dart';
+
+class A extends Equatable {
   final int value;
 
   const A(this.value);
+
+  @override
+  // TODO: implement props
+  List<Object?> get props => [value];
 }
 
 void main() {
