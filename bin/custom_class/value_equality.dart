@@ -2,6 +2,14 @@ class A {
   int value;
   A(this.value);
 
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        other is A && runtimeType == other.runtimeType && value == other.value;
+  }
+
+  @override
+  int get hashCode => value.hashCode;
 
   @override
   // override 는 현재 클래스에서 사용할 수 있는 함수를 재정의하기 위해서 쓰며
