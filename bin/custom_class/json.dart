@@ -12,6 +12,13 @@ class Person {
   factory Person.fromJson(Map<String, dynamic> json) {
     return Person(name: json['name'], age: json['age']);
   }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'name': name,
+      'age': age,
+    };
+  }
 }
 
 void main() {
@@ -27,4 +34,8 @@ void main() {
   // Map<String, dynamic> -> Person
   Person person = Person.fromJson(jsonMap);
   print(person);
+
+  // Person ->  Map<String, dynamic>
+  Map<String, dynamic> personMap = person.toJson();
+  print(personMap);
 }
