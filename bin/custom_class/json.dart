@@ -38,4 +38,9 @@ void main() {
   // Person ->  Map<String, dynamic>
   Map<String, dynamic> personMap = person.toJson();
   print(personMap);
+
+  // Map<String, dynamic>  -< json 포멧 String
+  String personString = json.encode(personMap);
+  print(personString);
+  print(personString.runtimeType);
 }
