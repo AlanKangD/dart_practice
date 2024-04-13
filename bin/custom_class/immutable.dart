@@ -1,8 +1,8 @@
 class A {
-  int value1;
-  int value2;
+  final int value1;
+  final int value2;
 
-  A({
+  const A({
     required this.value1,
     required this.value2,
   });
@@ -10,7 +10,7 @@ class A {
   @override
   String toString() {
     return "A(value1:$value1, value2:$value2)";
-  }
+  } 
 }
 
 void main() {
