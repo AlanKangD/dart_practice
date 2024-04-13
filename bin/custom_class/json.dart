@@ -40,7 +40,7 @@ void main() {
   print(personMap);
 
   // Map<String, dynamic>  -< json 포멧 String
-  String personString = json.encode(personMap);
+  String personString = jsonEncode(personMap);
   print(personString);
   print(personString.runtimeType);
 }
