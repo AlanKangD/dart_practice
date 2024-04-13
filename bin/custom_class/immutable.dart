@@ -10,14 +10,15 @@ class A {
   @override
   String toString() {
     return "A(value1:$value1, value2:$value2)";
-  } 
+  }
 }
 
 void main() {
   A a = A(value1: 1, value2: 1);
   A b = a;
 
-  a.value1 = 2;
+  // a.value1 = 2;  // 에러 발생
+  a = A(value1: 2, value2: 2);
   print(a);
   print(b);
 }
